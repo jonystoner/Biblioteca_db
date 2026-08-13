@@ -19,8 +19,8 @@ export class AutoresService {
         ]) as ResultSetHeader
         
         return {
-            mensagem: 'livro cadastrdo com sucesso ',
-            livro: {    
+            mensagem: 'Autor cadastrdo com sucesso ',
+            autor: {    
                 id:resultado.insertId,
                 nome,
                 nacionalidade,
