@@ -1,4 +1,4 @@
-import { Controller,Body,Post} from '@nestjs/common';
+import { Controller,Body,Post,Get,Put,Delete, ParseIntPipe, Param} from '@nestjs/common';
 import { CreateAutoresDto } from './dto/create-autor.dto';
 import { AutoresService } from './autores.service';
 
@@ -11,4 +11,9 @@ export class AutoresController {
     criar(@Body() CreateAutoresDto: CreateAutoresDto) {
         return this.AutoresService.criar(CreateAutoresDto);
     }
+
+  @Get(':id')
+  buscarPorId(@Param('id', ParseIntPipe) id: number) {
+    return this.AutoresService.buscarPorId(id);
+  }
 }
