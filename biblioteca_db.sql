@@ -15,3 +15,11 @@ CREATE TABLE autores (
     nacionalidade VARCHAR(150) NOT NULL,
     ano_nascimento INT NOT NULL
 );
+
+
+create table usuario (
+	id_usuario int auto_increment primary key,
+    nome varchar(150) not null,
+    email varchar(150) not null unique,
+    senha varchar(255) not null 
+);
